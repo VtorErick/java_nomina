@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="320.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ui.users.UserDialogController">
+    <stylesheets>
+        <URL value="@userdialog.css" />
+    </stylesheets>
+   <children>
+      <JFXTextField fx:id="usernameTxt" layoutX="33.0" layoutY="131.0" prefHeight="38.0" prefWidth="240.0" promptText="Nombre de usuario" />
+      <JFXTextField fx:id="firstNameTxt" labelFloat="true" layoutX="33.0" layoutY="198.0" prefHeight="38.0" prefWidth="240.0" promptText="Nombre" />
+      <JFXTextField fx:id="lastNameTxt" labelFloat="true" layoutX="33.0" layoutY="265.0" prefHeight="38.0" prefWidth="240.0" promptText="Apellido" />
+      <JFXTextField fx:id="emailTxt" labelFloat="true" layoutX="33.0" layoutY="331.0" prefHeight="38.0" prefWidth="240.0" promptText="Correo electrónico" />
+      <JFXToggleButton fx:id="isActive" layoutX="33.0" layoutY="465.0" text="Usuario activo" />
+      <JFXPasswordField fx:id="passwordTxt" layoutX="33.0" layoutY="401.0" prefHeight="38.0" prefWidth="240.0" promptText="Contraseña" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="88.0" stroke="BLACK" strokeType="INSIDE" width="320.0" />
+      <Label layoutX="84.0" layoutY="31.0" text="Datos del usuario" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="71.0" fitWidth="50.0" layoutX="25.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/icons8-user.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSave" layoutX="33.0" layoutY="615.0" onAction="#handleSaveUser" prefHeight="38.0" prefWidth="240.0" style="-fx-background-color: #000;" text="Guardar usuario" textFill="WHITE" />
+      <JFXComboBox fx:id="profileId" layoutX="33.0" layoutY="542.0" prefHeight="38.0" prefWidth="240.0" promptText="Perfíl" />
+      <Label fx:id="errorLbl" layoutX="25.0" layoutY="107.0" prefHeight="21.0" prefWidth="261.0" />
+   </children>
+</AnchorPane>

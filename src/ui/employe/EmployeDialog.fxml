@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<StackPane fx:id="mainPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.employe.EmployeDialogController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="mainContainer" prefHeight="705.0" prefWidth="855.0" styleClass="mainFxmlClass">
+          <stylesheets>
+              <URL value="@employedialog.css" />
+          </stylesheets>
+          <children>
+            <JFXTextField fx:id="firstNameTxt" labelFloat="true" layoutX="31.0" layoutY="143.0" prefHeight="38.0" prefWidth="240.0" promptText="Nombre" />
+            <JFXTextField fx:id="lastNameTxt" labelFloat="true" layoutX="31.0" layoutY="210.0" prefHeight="38.0" prefWidth="240.0" promptText="Apellido" />
+            <JFXTextField fx:id="emailTxt" labelFloat="true" layoutX="31.0" layoutY="276.0" prefHeight="38.0" prefWidth="240.0" promptText="Correo electrónico" />
+            <JFXToggleButton fx:id="isActive" layoutX="31.0" layoutY="410.0" text="Empleado activo" />
+            <JFXPasswordField fx:id="passwordTxt" layoutX="31.0" layoutY="346.0" prefHeight="38.0" prefWidth="240.0" promptText="Contraseña" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="87.0" stroke="BLACK" strokeType="INSIDE" width="855.0" />
+            <Label layoutX="84.0" layoutY="31.0" text="Datos del empleado" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="71.0" fitWidth="50.0" layoutX="25.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons8-user.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnSave" layoutX="310.0" layoutY="643.0" onAction="#handleSaveEmploye" prefHeight="38.0" prefWidth="240.0" style="-fx-background-color: #000;" text="GUARDAR EMPLEADO" textFill="WHITE" />
+            <Label fx:id="errorLbl" layoutX="25.0" layoutY="107.0" prefHeight="21.0" prefWidth="261.0" />
+            <JFXComboBox fx:id="paymentType" layoutX="310.0" layoutY="143.0" prefHeight="38.0" prefWidth="240.0" promptText="Tipo de pago" />
+            <JFXTextField fx:id="paymentTxt" labelFloat="true" layoutX="310.0" layoutY="210.0" prefHeight="38.0" prefWidth="240.0" promptText="Percepción salarial" />
+            <JFXTextField fx:id="curpTxt" labelFloat="true" layoutX="310.0" layoutY="276.0" prefHeight="38.0" prefWidth="240.0" promptText="CURP" />
+            <JFXTextField fx:id="rfcTxt" labelFloat="true" layoutX="310.0" layoutY="346.0" prefHeight="38.0" prefWidth="240.0" promptText="RFC" />
+            <JFXComboBox fx:id="countryCmb" layoutX="31.0" layoutY="501.0" prefHeight="38.0" prefWidth="240.0" promptText=" País" />
+            <JFXTextField fx:id="addressTxt" labelFloat="true" layoutX="310.0" layoutY="421.0" prefHeight="38.0" prefWidth="240.0" promptText="Dirección" />
+            <JFXTextField fx:id="cpTxt" labelFloat="true" layoutX="310.0" layoutY="501.0" prefHeight="38.0" prefWidth="240.0" promptText="Código P." />
+            <JFXTextField fx:id="jobPositionTxt" labelFloat="true" layoutX="588.0" layoutY="143.0" prefHeight="38.0" prefWidth="240.0" promptText="Puesto" />
+            <JFXTextField fx:id="clabeTxt" labelFloat="true" layoutX="588.0" layoutY="276.0" prefHeight="38.0" prefWidth="240.0" promptText="CLABE" />
+            <JFXDatePicker fx:id="birthdateTxt" layoutX="310.0" layoutY="585.0" prefHeight="38.0" prefWidth="240.0" promptText="Fecha de nacimiento" />
+            <CheckComboBox fx:id="cmbDed" accessibleText="Deducciones" layoutX="588.0" layoutY="372.0" prefHeight="38.0" prefWidth="240.0" />
+            <Label layoutX="588.0" layoutY="344.0" text="Deducciones" />
+            <JFXTextField fx:id="stateTxt" labelFloat="true" layoutX="31.0" layoutY="585.0" prefHeight="38.0" prefWidth="240.0" promptText="Estado" />
+            <JFXComboBox fx:id="bankCmb" layoutX="588.0" layoutY="210.0" prefHeight="38.0" prefWidth="240.0" promptText="Banco" />
+            <Label layoutX="588.0" layoutY="432.0" text="Imagen del empleado" />
+            <ImageView fx:id="employeImg" fitHeight="150.0" fitWidth="150.0" layoutX="588.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/icons8-camera.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
